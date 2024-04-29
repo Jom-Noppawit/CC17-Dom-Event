@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ul>
+
+
+  </ul>
+  <script>
+    // let input;
+    // let li;
+    // const ul = document.querySelector('ul')
+   
+    // do{
+    // let input = prompt("Text Chat")
+    // li = document.createElement('li')
+    
+
+    // }while(true)
+
+    const ul = document.createElement('ul');
+    let text = prompt('Enter something');
+    while(!(text === null || text.trim() === '')){
+      const li = document.createElement('li')
+      li.textContent = text; 
+      ul.append(li)
+      text = prompt('Enter something');
+    }
+
+    document.body.prepend(ul)
+  </script>
+</body>
+</html>

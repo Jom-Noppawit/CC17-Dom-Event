@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button id="decrease"> - </button>
+  <span> 0 </span>
+  <button id="increase"> + </button>
+  <input type="reset" value="clear form">
+
+  <script>
+     const decreseBtn = document.getElementById('decrease');
+     const increaseBtn = document.getElementById('increase');
+     const count = document.querySelector('span');
+     const reset = document.getElementById('input')
+
+     increaseBtn.addEventListener('click' , function () {
+        const currentNum = +count.textContent;
+        const newNum = currentNum + 1 ;
+        count.textContent = newNum;
+     })
+
+     decreseBtn.addEventListener('click' , function () {
+        const currentNum = +count.textContent;
+        if (currentNum > 0) {
+           const newNum = currentNum - 1 ;
+           count.textContent = newNum;
+        } 
+     })
+
+     reset.addEventListener('click', function(){
+
+     })
+
+  </script>
+</body>
+</html>
